@@ -283,48 +283,35 @@ body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; overflow-x: hidden
         padding-top: 6rem;
     }
 }
-/* ===== FIX ABOUT BUTTONS CENTER ===== */
-#about .bio-container,
-.discord-bio > div,
-.bio-social-section {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-}
-
-/* Button container khusus */
-#about div[style*="display: flex"],
-.bio-social-section div:last-child {
-    justify-content: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-/* ===== FIX HERO LINKS BUTTONS CENTER ===== */
+/* ===== HERO LINKS HORIZONTAL CENTER ===== */
 .hero-links {
     display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+    flex-wrap: wrap !important;
     justify-content: center !important;
-    gap: 1rem !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
     width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    padding: 0 1rem !important;
 }
 
 .hero-links .link-btn {
-    display: block !important;
-    margin: 0 auto !important;
+    flex: 1 !important;
+    min-width: 200px !important;
+    max-width: 280px !important;
     text-align: center !important;
-    max-width: 300px !important;
+    white-space: nowrap !important;
 }
 
-/* Mobile perfect center */
+/* Mobile: 2 kolom */
 @media (max-width: 768px) {
     .hero-links {
-        padding: 0 1rem !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 1rem !important;
+    }
+    
+    .hero-links .link-btn {
+        flex: 1 1 45% !important;  /* 2 button per baris */
+        font-size: 0.9rem !important;
     }
 }
