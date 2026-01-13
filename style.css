@@ -146,6 +146,8 @@ body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; overflow-x: hidden
     flex-wrap: wrap;
     gap: 1rem;
 }
+@media (maxwidth: 768px) {
+    .hero-links {justify-content: center}
 
 .floating-elements {
     position: absolute;
