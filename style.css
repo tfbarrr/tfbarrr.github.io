@@ -223,3 +223,37 @@ body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; overflow-x: hidden
     #nav-links { display: none; }
     .hero-title { font-size: 2.5rem; }
 }
+
+/* Hero Perfect Mobile/Desktop */
+.hero-wrapper {
+    grid-template-columns: minmax(180px, 220px) 1fr !important;
+    min-height: 80vh;
+}
+
+/* Mobile Stack */
+@media (max-width: 768px) {
+    .hero-wrapper {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto 1fr !important;
+        text-align: center !important;
+        gap: 2rem !important;
+        padding: 1rem !important;
+    }
+    .profile-pic { 
+        margin: 0 auto !important; 
+        order: -1 !important;
+    }
+}
+
+/* Projects Auto-Fit */
+.projects-grid { 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important; 
+}
+
+/* Typography Fluid */
+.display-name {
+    font-size: clamp(2rem, 5vw, 4rem) !important;
+}
+.section h2 {
+    font-size: clamp(2.5rem, 6vw, 4rem) !important;
+}
