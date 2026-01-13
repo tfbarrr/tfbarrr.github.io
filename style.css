@@ -303,3 +303,28 @@ body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; overflow-x: hidden
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+/* ===== FIX HERO LINKS BUTTONS CENTER ===== */
+.hero-links {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.hero-links .link-btn {
+    display: block !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    max-width: 300px !important;
+}
+
+/* Mobile perfect center */
+@media (max-width: 768px) {
+    .hero-links {
+        padding: 0 1rem !important;
+    }
+}
