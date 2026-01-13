@@ -198,7 +198,7 @@ body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; overflow-x: hidden
 
 /* Projects */
 .section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
-.section h2 { text-align: center; font-size: 3rem; margin-bottom: 3rem; color: #2C2F33; }
+.section h2 { text-align: center; font-size: 3rem; margin-bottom: 3rem; color: #FFFFFF; }
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
 .project-card { 
     background: rgba(255,255,255,0.95); border-radius: 20px; overflow: hidden; 
@@ -206,15 +206,15 @@ body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; overflow-x: hidden
 }
 .project-card:hover { transform: translateY(-15px); box-shadow: 0 25px 50px rgba(0,0,0,0.2); }
 .project-card img { width: 100%; height: 200px; object-fit: cover; }
-.project-card h3 { padding: 1.5rem 1.5rem 0; color: #36393F; }
-.project-card p { padding: 0 1.5rem 1.5rem; color: #72767D; }
+.project-card h3 { padding: 1.5rem 1.5rem 0; color: #FFFFFF; }
+.project-card p { padding: 0 1.5rem 1.5rem; color: #FFFFFF; }
 .project-links { padding: 0 1.5rem 1.5rem; display: flex; gap: 1rem; }
 
 /* Skills */
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
 .skill-item { text-align: center; }
-.skill-item i { font-size: 4rem; color: #7289DA; margin-bottom: 1rem; }
-.skill-bar { background: #E3E5E8; height: 10px; border-radius: 5px; overflow: hidden; margin-top: 1rem; }
+.skill-item i { font-size: 4rem; color: #FFFFFF; margin-bottom: 1rem; }
+.skill-bar { background: #1e2723; height: 10px; border-radius: 5px; overflow: hidden; margin-top: 1rem; }
 .skill-progress { height: 100%; background: linear-gradient(90deg, #7289DA, #43B581); border-radius: 5px; width: 0; transition: width 2s ease; }
 
 /* Responsive */
@@ -282,26 +282,4 @@ body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; overflow-x: hidden
     .hero-discord {
         padding-top: 6rem;
     }
-}/* ===== FIX TEXT WARNA NYAMAR ===== */
-.project-card h3 { 
-    color: #1e1e2e !important;  /* hitam tua kontras */
 }
-
-.project-card p { 
-    color: #36393f !important;  /* abu Discord */
-}
-
-.skill-item h3 { 
-    color: #2c2f33 !important;  /* Discord dark */
-}
-
-.section h2 { 
-    color: #ffffff !important;  /* putih terang */
-}
-
-/* Mobile extra kontras */
-@media (max-width: 768px) {
-    .project-card h3 { color: #000 !important; }
-    .project-card p { color: #333 !important; }
-}
-
