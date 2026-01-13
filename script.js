@@ -29,7 +29,7 @@ function typeWriter(element, texts, speed = 100) {
     }
     type();
 }
-typeWriter(document.getElementById('typewriter'), ['Membuat Bot Discord Keren', 'Python & discord.py Expert', 'Leaderboard | Role Shop | Economy']);
+typeWriter(document.getElementById('typewriter'), ['Learning dev', 'pls scholarship;)', 'checkout my shits below']);
 
 // AOS Animation
 AOS.init({ duration: 1000, once: true });
