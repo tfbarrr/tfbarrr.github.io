@@ -283,3 +283,23 @@ body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; overflow-x: hidden
         padding-top: 6rem;
     }
 }
+/* ===== FIX ABOUT BUTTONS CENTER ===== */
+#about .bio-container,
+.discord-bio > div,
+.bio-social-section {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+/* Button container khusus */
+#about div[style*="display: flex"],
+.bio-social-section div:last-child {
+    justify-content: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
