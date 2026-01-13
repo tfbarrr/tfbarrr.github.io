@@ -20,7 +20,7 @@ body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; overflow-x: hidden
     align-items: center; 
     justify-content: center;
     overflow: hidden;
-    padding: 2rem 0;
+    padding: 6rem 0 2rem;
 }
 
 .hero-wrapper {
@@ -261,3 +261,25 @@ body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; overflow-x: hidden
     0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
 }
+/* FIX NAVBAR OVERLAP MOBILE */
+.hero-discord {
+    padding-top: 7rem;  /* ruang buat navbar */
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-discord {
+        padding-top: 8rem !important;  /* mobile lebih besar */
+    }
+    
+    .hero-wrapper {
+        padding-top: 1rem !important;  /* tambah spacing internal */
+    }
+}
+
+/* Desktop juga aman */
+@media (min-width: 769px) {
+    .hero-discord {
+        padding-top: 6rem;
+    }
+    }
