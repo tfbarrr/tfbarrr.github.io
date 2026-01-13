@@ -282,4 +282,26 @@ body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; overflow-x: hidden
     .hero-discord {
         padding-top: 6rem;
     }
-    }
+}/* ===== FIX TEXT WARNA NYAMAR ===== */
+.project-card h3 { 
+    color: #1e1e2e !important;  /* hitam tua kontras */
+}
+
+.project-card p { 
+    color: #36393f !important;  /* abu Discord */
+}
+
+.skill-item h3 { 
+    color: #2c2f33 !important;  /* Discord dark */
+}
+
+.section h2 { 
+    color: #ffffff !important;  /* putih terang */
+}
+
+/* Mobile extra kontras */
+@media (max-width: 768px) {
+    .project-card h3 { color: #000 !important; }
+    .project-card p { color: #333 !important; }
+}
+
