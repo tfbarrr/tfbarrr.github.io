@@ -29,7 +29,7 @@ function typeWriter(element, texts, speed = 100) {
     }
     type();
 }
-typeWriter(document.getElementById('typewriter'), ['learning dev', 'active student', 'checkout my shits bellow']);
+typeWriter(document.getElementById('typewriter'), ['learning developer', 'active student', 'checkout my shits bellow']);
 
 // AOS Animation
 AOS.init({ duration: 1000, once: true });
