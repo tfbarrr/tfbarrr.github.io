@@ -250,8 +250,20 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .nav-container { padding: 1rem; }
-    #nav-links { display: none; }
+    .nav-container { padding: 1rem 1rem; }
+    #nav-links { 
+      display: none; 
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(15,15,35,0.98);
+      backdrop-filter: blur(20px);
+      padding: 1rem;
+      gap: 1rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
     .hamburger { display: flex; flex-direction: column; gap: 4px; cursor: pointer; }
     .hamburger span { 
         width: 25px; height: 3px; 
