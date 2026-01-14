@@ -9,28 +9,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Typing Effect
-function typeWriter(element, texts, speed = 100) {
-    let textIndex = 0;
-    let charIndex = 0;
-    function type() {
-        if (charIndex < texts[textIndex].length) {
-            element.textContent += texts[textIndex].charAt(charIndex);
-            charIndex++;
-            setTimeout(type, speed);
-        } else {
-            setTimeout(() => {
-                charIndex = 0;
-                textIndex = (textIndex + 1) % texts.length;
-                element.textContent = '';
-                type();
-            }, 2000);
-        }
-    }
-    type();
-}
-typeWriter(document.getElementById('typewriter'), ['learning developer', 'active student', 'checkout my shits bellow']);
-
 // AOS Animation
 AOS.init({ duration: 1000, once: true });
 
@@ -49,3 +27,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
     });
 });
+// Floating particles
+function createParticles() {
+    const particles = document.getElementById('particles');
+    for(let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.width = particle.style.height = (Math.random() * 4 + 2) + 'px';
+        particle.style.animationDelay = Math.random() * 20 + 's';
+        particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+        particles.appendChild(particle);
+    }
+}
+createParticles();

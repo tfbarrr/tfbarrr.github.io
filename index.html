@@ -11,102 +11,73 @@
 <body>
     <!-- Navbar -->
     <nav id="navbar" class="discord-navbar">
-    <div class="nav-container">
-        <h3><i class="fab fa-discord"></i> barafrns</h3>
-        <ul id="nav-links">
-            <li><a href="#home">home</a></li>
-            <li><a href="#about">about</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#skills">skills</a></li>
-        </ul>
+  <div class="nav-container">
+    <h3><i class="fab fa-discord"></i> barafrns</h3>
+
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+
+    <ul id="nav-links">
+      <li><a href="#home">home</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#skills">skills</a></li>
+    </ul>
+  </div>
 </nav>
 
-    <!-- Hero Section -->
-    <!-- Hero Section Discord Style -->
-<section id="home" class="hero-discord" data-aos="fade">
-    <div class="hero-wrapper">
-        <!-- Profile Picture -->
-        <div class="profile-pic" data-aos="zoom-in">
-            <img src="https://raw.githubusercontent.com/tfbarrr/tfbarrr.github.io/main/profile.jpg" alt="barafrns" id="profile-img">
-            <div class="profile-ring"></div>
+<!-- PARTICLES BG -->
+<div class="particles" id="particles"></div>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="profile-card">
+        <!-- AVATAR -->
+        <div class="avatar-container">
+            <img src="https://raw.githubusercontent.com/tfbarrr/tfbarrr.github.io/main/profile.jpg" 
+                 alt="barafrns" class="avatar">
+            <div class="status-ring"></div>
+            <div class="status-dot"></div>
         </div>
 
-        <!-- Main Content -->
-        <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
-            <h1 class="display-name">hi, i'm <span class="gradient-name">barafrns</span> 🌙</h1>
-            
-            <div class="bio-text">
-    <p>latenight coffee • nocturnal creature.</p>
-    <div id="typewriter" style="font-size: 1.2rem; color: #7289da; margin-top: 1rem;"></div>
-            </div>
-
-            <!-- Status Bar -->
-            <div class="status-bar">
-                <span class="status-badge">portfolio ▸ about ▸ projects</span>
-                <div class="status-buttons">
-                    <button class="status-btn active">my bot</button>
-                    <button class="status-btn">business</button>
-                    <button class="status-btn">social media</button>
-                </div>
-            </div>
-
-            <!-- Bottom Links -->
-            <div class="hero-links">
-                <a href="#about" class="link-btn">click here to know me more</a>
-                <a href="#" class="link-btn">sometimes, weird means cool</a>
-                <a href="#projects" class="link-btn">My completed projects ???</a>
-            </div>
+        <!-- USER INFO -->
+        <div class="bio-section">
+            <h1 class="display-name">barafrns</h1>
+            <div class="bio-tag">#6969</div>
         </div>
 
-        <!-- Floating Elements -->
-        <div class="floating-elements">
-            <div class="float-moon">🌙</div>
-            <div class="float-star">✨</div>
-            <div class="float-star2">⭐</div>
+        <!-- DISCORD BIO -->
+        <div class="bio-text">
+            latenight coffee ☕ nocturnal creature<br>
+            python discord.py specialist | economy systems | slash commands<br>
+            available for custom bot development 24/7
         </div>
 
-        <!-- Bio & Social Section -->
-<section id="about" class="discord-bio" style="padding: 3rem 2rem; background: rgba(30,30,46,0.8); margin: 2rem 0;">
-    <div style="max-width: 1000px; margin: 0 auto;">
-        
-        <!-- Status Bar Style -->
-        <div style="background: rgba(0,0,0,0.4); padding: 1.5rem; border-radius: 15px; border-left: 4px solid #7289da; margin-bottom: 2rem;">
-            <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
-                <div style="width: 12px; height: 12px; background: #43b581; border-radius: 50%; animation: pulse 2s infinite;"></div>
-                <span style="color: #7289da; font-weight: 600; font-size: 1.1rem;">barafrns</span>
-                <span style="color: #b9bbbe;">● silent ● listener ● sleepy</span>
-                <span style="background: rgba(67,181,129,0.2); padding: 0.3rem 0.8rem; border-radius: 12px; color: #43b581; font-size: 0.85rem;">idle</span>
-            </div>
-            
-            <!-- Activities -->
-            <div style="margin-top: 1rem; color: #dcddde;">
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
-                    <span style="background: rgba(255,255,255,0.1); padding: 0.4rem 0.8rem; border-radius: 8px;">eat</span>
-                    <span style="background: rgba(255,255,255,0.1); padding: 0.4rem 0.8rem; border-radius: 8px;">sleep</span>
-                    <span style="background: rgba(255,255,255,0.1); padding: 0.4rem 0.8rem; border-radius: 8px;">pray</span>
-                    <span style="background: rgba(255,255,255,0.1); padding: 0.4rem 0.8rem; border-radius: 8px;">coffee</span>
-                </div>
-            </div>
+        <!-- ROLES -->
+        <div class="roles-grid">
+            <span class="role-badge role-dev">Developer</span>
+            <span class="role-badge role-python">Python</span>
+            <span class="role-badge role-bot">Bot Dev</span>
+            <span class="role-badge role-design">discord</span>
         </div>
 
-        <!-- Social Quick Links -->
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="https://github.com/tfbar" style="background: #24292f; color: #fff; padding: 0.8rem 1.5rem; border-radius: 20px; text-decoration: none;">
-                <i class="fab fa-github"></i> GitHub
+        <!-- CTAs -->
+        <div class="cta-buttons">
+            <a href="https://discord.gg/KVG5Vw66" class="btn btn-primary">
+                <i class="fab fa-discord"></i> Add Friend
             </a>
-            <a href="https://discord.gg/KVG5Vw66" style="background: linear-gradient(135deg, #5865f2, #7289da); color: #fff; padding: 0.8rem 1.5rem; border-radius: 20px; text-decoration: none;">
-                <i class="fab fa-discord"></i> Discord
-            </a>
-            <a href="https://www.instagram.com/akbarrrba?igsh=MXI1aHk3eXE3OGQ0Zw==" style="background: linear-gradient(135deg, #f09433, #e6683c); color: #fff; padding: 0.8rem 1.5rem; border-radius: 20px; text-decoration: none;">
-                <i class="fab fa-instagram"></i> IG
+            <a href="https://github.com/tfbarrr" class="btn btn-secondary">
+                <i class="fab fa-github"></i> View Projects
             </a>
         </div>
     </div>
 </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section">
+    <section id="projects-section" class="projects-grid">
         <h2 data-aos="fade-up">Bot Projects</h2>
         <div class="projects-grid">
             <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
