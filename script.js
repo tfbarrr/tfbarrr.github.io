@@ -98,3 +98,48 @@ window.addEventListener('scroll', () => {
         }
     }
 });
+// ... (Kode sebelumnya) ...
+
+// 6. Mobile Navbar Logic (Hamburger)
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        // Toggle class active
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+
+        // Ganti icon Bars (Garis) jadi Times (Silang)
+        const icon = hamburger.querySelector('i');
+        if (navMenu.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+
+    // Fitur Tambahan: Tutup menu otomatis saat link diklik
+    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        
+        // Reset icon ke bars
+        const icon = hamburger.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }));
+
+    // Fitur Tambahan: Tutup menu jika klik di luar menu (opsional)
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navMenu.contains(e.target) && navMenu.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            const icon = hamburger.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+}

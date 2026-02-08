@@ -298,3 +298,127 @@ footer { padding: 3rem 0; text-align: center; border-top: 1px solid var(--border
     .biodata-grid { grid-template-columns: 1fr; }
     .bio-item[style*="span 2"] { grid-column: auto !important; }
 }
+/* =========================================
+   9. MOBILE RESPONSIVE NAVBAR (ADDITION)
+   ========================================= */
+
+/* Default: Sembunyikan Hamburger di Desktop */
+#hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    z-index: 102;
+    cursor: none; /* Mengikuti custom cursor */
+}
+
+/* Tampilan Mobile */
+@media (max-width: 900px) {
+    /* 1. Tampilkan Tombol Hamburger */
+    #hamburger {
+        display: block;
+    }
+
+    /* 2. Ubah Nav Right menjadi Side Menu */
+    .nav-right {
+        display: flex !important; /* Override display: none lama */
+        position: fixed;
+        top: 0;
+        right: -100%; /* Sembunyi di kanan layar */
+        width: 75%;   /* Lebar menu */
+        height: 100vh;
+        background: var(--card-bg);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+        backdrop-filter: blur(10px);
+        z-index: 101; /* Di atas konten lain */
+    }
+
+    /* Class Active untuk memunculkan menu */
+    .nav-right.active {
+        right: 0;
+    }
+
+    /* 3. Style Links di dalam Mobile Menu */
+    #nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    /* 4. Style Tombol Theme di dalam Mobile Menu */
+    #theme-toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        border: 2px solid var(--border-color);
+    }
+}
+/* =========================================
+   10. PROJECTS PAGE SPECIFIC (CLEANUP)
+   ========================================= */
+
+/* Hero Section khusus Projects */
+.projects-hero {
+    padding-top: 8rem;
+    min-height: auto;
+}
+
+/* Header Card (Pengganti Intro Card Bento) */
+.project-header {
+    background: var(--card-bg);
+    border-radius: 24px;
+    padding: 3rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-header:hover {
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+}
+
+.project-header h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+/* --- TEMA HULK SPECIFIC --- */
+/* Menggantikan inline style yang panjang */
+.hulk-badge {
+    background: rgba(57, 255, 20, 0.1) !important; 
+    color: #39ff14 !important; 
+    border: 1px solid #39ff14 !important; /* Warna Border Solid Neon */
+}
+
+.hulk-title {
+    color: #39ff14 !important; /* Neon Green Text */
+    text-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
+}
+
+/* Responsiveness untuk Projects */
+@media (max-width: 768px) {
+    .project-header {
+        padding: 2rem;
+        text-align: center;
+    }
+    .projects-hero {
+        padding-top: 6rem;
+    }
+    .code-grid {
+        grid-template-columns: 1fr; /* 1 Kolom di HP */
+    }
+}
